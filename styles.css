@@ -48,6 +48,11 @@ h6{
   text-align: right;
 }
 
+#picture{
+  color: black;
+  font-weight: normal;
+}
+
 .credit{
   color: green
   padding-top: 2px;
