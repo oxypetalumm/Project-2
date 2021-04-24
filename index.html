@@ -4,45 +4,38 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Home Page</title>
+  <title>California Crime Info Page</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-
 </head>
 
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <img src="Images/bf2d571488a39e11419799c2a29a010d-cute-cactus-by-vexels.png" alt="credit: https://images.vexels.com" style="width:6%;height:6%;">
-    <a class="navbar-brand text-white" href="*********">
+    <a class="navbar-brand text-white" href="index.html">
        California Crime Info Page
-    </a>
-    <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
- 
+    </a> 
   </nav>
 
-  <div class="hero text-center">
-    <marquee>
-        
+  <div>
+    <marquee>        
         <h1>
             <strong>
                 Hello World!  
                 Welcome!
             </strong> 
         </h1>
-
     </marquee>
   </div>
 
 
-    <center>
-        <img src="Images/staticflickr.png" 
-        alt='"Elk Grove Park"' 
-        style="width:100%;height:100%;">
-    </center>
+
+<img src="Images/staticflickr.png" 
+alt='"Elk Grove Park"' 
+style="width:100%;height:100%;">
+
 
 <p class='credit'>
     Photo Credit: staticflickr.com
@@ -54,7 +47,7 @@
     
     <div class= 'col-sm-9'>
         <div id="table-area" class="">
-          <table id="ufo-table" class="table table-striped">
+          <table class="table table-striped">
               <thead>
                 <tr>
                   <th class="table-head">City</th>
@@ -90,8 +83,8 @@
       </label>
       <p>
         <select id="selDataset" onchange="getData(this.value)">
-          <option value="us">2019</option>
-          <option value="uk">2018</option>
+          <option value="california2019">2019</option>
+          <option value="california2018">2018</option>
         </select>        
       </p>
       
@@ -110,9 +103,9 @@
         </h4>
       </label>
       <p>
-        <select id="selDataset" onchange="getData(this.value)">
-          <option value="us">10 Most Dangerous Cities</option>
-          <option value="uk">10 Safest Cities</option>
+        <select  id="selDataset"onchange="getData(this.value)">
+          <option value="california2019">10 Most Dangerous Cities</option>
+          <option value="california2018">10 Safest Cities</option>
         </select>
       </p>
 
