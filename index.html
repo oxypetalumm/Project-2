@@ -14,32 +14,14 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <img class="nav-ufo" src="images/logo-Elk-Grove-Parks-w230.png">
+    <img src="Images/bf2d571488a39e11419799c2a29a010d-cute-cactus-by-vexels.png" alt="credit: https://images.vexels.com" style="width:6%;height:6%;">
     <a class="navbar-brand text-white" href="*********">
-        Elk Grove Parks Info Page
+       California Crime Info Page
     </a>
     <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="nav navbar-nav navbar-right">
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="WebVisualizations/plots-button.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Parks by Zip Code
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="******.html">95624</a>
-            <a class="dropdown-item" href="******.html">95757  </a>
-            <a class="dropdown-item" href="******.html">95758 </a>
-          </div>
-        </li>
-
-
-      </ul>
-
-    </div>
   </nav>
 
   <div class="hero text-center">
@@ -48,7 +30,7 @@
         <h1>
             <strong>
                 Hello World!  
-                Elk Grove Parks Welcome You!
+                Welcome!
             </strong> 
         </h1>
 
@@ -66,76 +48,75 @@
     Photo Credit: staticflickr.com
 </p>
 
-
-
-  </div>
-
-
-
-
-
-
-
 <div class = 'container'>
 
   <div class='row'> 
     
-    <div class= 'col-sm-7'>
-      <h2>EXPLORE THE PARKS OF ELK GROVE</h2>
-        
-        <p> 
-         Elk Grove is bursting with over 100 parks, featuring barnyard themed to ocean themed. Everyone can find a park perfect for their little ones and everyone in the family to explore. 
-        </p>   
-        <p>
-            My team searched and sorted out information about Elk Grove parks based on their zip codes and include information about nearby Starbucks, home values, as well as crime.  
-        </p> 
-        <p>
-            There are three zip codes in Elk Grove. There zip codes include: 95624, 95757, and 95758. Each zip code covers numerus parks.
-        </p>
-        <p>
-           Enjoy your journey of finding an Elk Grove park that meets your needs.
-        </p>  
-
-    </div>  
+    <div class= 'col-sm-9'>
+        <div id="table-area" class="">
+          <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">City</th>
+                  <th class="table-head">Population</th>
+                  <th class="table-head">Violent Crime</th>
+                  <th class="table-head">Murder</th>
+                  <th class="table-head">Rape</th>
+                  <th class="table-head">Robbery</th>
+                  <th class="table-head">Assault</th>
+                  <th class="table-head">Property Crime</th>
+                  <th class="table-head">Burglary</th>
+                  <th class="table-head">Larceny</th>
+                  <th class="table-head">Motor Theft</th>
+                  <th class="table-head">Arson</th>
+                </tr>
+              </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>  
     
 
-    <div class='col-sm-1'>
-    </div>
-
-      <div class='col-sm-4'>
+      <div class='col-sm-3'>
 
         <h2>Filter Search</h2>
 
       <hr size="1", color="grey", width='100%'>
 
+      <label for="text">
+        <h4>
+          Click to select a year:
+        </h4>
+      </label>
+      <p>
+        <select id="selDataset" onchange="getData(this.value)">
+          <option value="us">2019</option>
+          <option value="uk">2018</option>
+        </select>        
+      </p>
+      
+      <label for="text">
+        <h4>
+          <p>
+            Click to select  
+          </p> 
+          <p>
+            10 most dangerous cities OR
+          </p>
+          <p>
+           10 safest cities:
+          </p>
 
-            <aside class="filters">
-                    <form>
-                      <div class="form-group">
-                        <ul class="list-group" id="filters">
-                          <li class="filter list-group-item">
-                            <label for="text">Click for a specific dropdown link.</label>
+        </h4>
+      </label>
+      <p>
+        <select id="selDataset" onchange="getData(this.value)">
+          <option value="us">10 Most Dangerous Cities</option>
+          <option value="uk">10 Safest Cities</option>
+        </select>
+      </p>
 
-                            <div class="dropdown">
-                                <button onclick="myFunction()" class="dropbtn">Dropdown Search</button>
-                                <div id="myDropdown" class="dropdown-content">
-                                  <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                                  <a href="#about">Starbucks</a>
-                                  <a href="#base">Home Values</a>
-                                  <a href="#base">Crime</a>
-                                </div>
-                              </div>
-                              
-                          </li>
-                        </ul>
-                      </div>
-
-                    </form>
-
-              </aside>
     
-
-
     </div>
     </div> 
   </div>
@@ -143,7 +124,7 @@
 
 <div class='container'>
   <div class='panel'>
-    ......MAP HERE.....
+    ......CHARTS HERE.....
   </div>
 
 </div>
@@ -151,46 +132,71 @@
 <hr size="1", color="grey", width='100%'>
 
 <div class='container'>
+  <h6>
 
     <p>
-        Credits: Carmen, Elstan, Lina (names in alphabetical order)
+      References:
+
+      <p>
+        <a class="dropdown-item" href="https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/california.xls" target="_blank">
+          FBI: UCR 
+          <em>CALIFORNIA Offenses Known to Law Enforcement by City, 2019</em>        
+        </a>
+      </p>
+
+      <p>
+        <a class="dropdown-item" href="https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/tables/table-8/table-8-state-cuts/california.xls" target="_blank">
+          FBI: UCR 
+          <em>CALIFORNIA Offenses Known to Law Enforcement by City, 2018</em>        
+        </a>
+      </p>
+
+
+      <p>
+        <a class="dropdown-item" href="https://www.publicceo.com/2015/03/these-are-the-10-most-dangerous-places-in-california/" target="_blank">
+          Grigson, Natalie (2015, March 4) 
+          <em>California is the Golden State, but the golden rule isn’t the norm in these 10 places</em>        
+        </a>
+      </p>
+      
+      <p>
+        <a class="dropdown-item" href="https://www.safewise.com/blog/safest-cities-california/" target="_blank">
+          McEntire, Katie (2021, March 15) 
+          <em>California’s 50 Safest Cities of 2021</em>        
+        </a>
+      </p>
+      
+
+    </p>
+
+    <p>
+        Credits: 
+        <a href='https://github.com/carmen-ho' target="_blank">
+          Carmen 
+        </a>, 
+        <a href='https://github.com/elstan-tmk' target="_blank">
+          Elstan
+        </a>, 
+        <a href='https://github.com/oxypetalumm' target="_blank">Lina
+        </a> (names in alphabetical order)
     </p>
     <p>
         2021
     </p>
+  </h6>  
    
 </div>
 
 
 
-<script>
-    /* When the user clicks on the button,
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-    
-    function filterFunction() {
-      var input, filter, ul, li, a, i;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      div = document.getElementById("myDropdown");
-      a = div.getElementsByTagName("a");
-      for (i = 0; i < a.length; i++) {
-        txtValue = a[i].textContent || a[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          a[i].style.display = "";
-        } else {
-          a[i].style.display = "none";
-        }
-      }
-    }
 
 
-    </script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="data/california2019.csv"></script>
+    <script src="js/app.js"></script>
 
 
 </body>

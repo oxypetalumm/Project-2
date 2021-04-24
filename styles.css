@@ -9,6 +9,10 @@ body {
 
 }
 
+/* .navImag{
+  size: 10px;
+} */
+
 p{
   text-align: left; 
 }
@@ -38,8 +42,12 @@ h2{
   text-align: left;
 }
 
+h4{
+  font-weight: bold;
+}
+
 h6{
-  color: lightseagreen;
+  color: green;
   padding: 0px 0px;
   margin: 0px;
   text-align: right;
