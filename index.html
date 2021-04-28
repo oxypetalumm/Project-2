@@ -5,6 +5,9 @@
 <head>
   <meta charset="UTF-8">
   <title>California Crime Info Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -15,8 +18,42 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <img src="Images/bf2d571488a39e11419799c2a29a010d-cute-cactus-by-vexels.png" alt="credit: https://images.vexels.com" style="width:6%;height:6%;">
     <a class="navbar-brand text-white" href="index.html">
-       California Crime Info Page
-    </a> 
+       California Crime Info Page Home
+    </a>
+    
+    <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="index.html">Dashboard <span class="sr-only"></a>
+        </li>
+<!-- 
+        <li class="nav-item">
+          <a class="nav-link text-white" href="WebVisualizations/comparisons-page.html">Comparisons</a>
+        </li> -->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="WebVisualizations/plots-button.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Datasets
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="2019_data.html">2019</a>
+            <a class="dropdown-item" href="2018_data.html">2018</a>
+            <a class="dropdown-item" href="2017_data.html">2017</a>
+
+          </div>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link text-white" href="WebVisualizations/data-page.html">Data</a>
+        </li> -->
+
+      </ul>
+    
   </nav>
 
   <div>
@@ -41,11 +78,13 @@ style="width:100%;height:100%;">
     Photo Credit: staticflickr.com
 </p>
 
-<div class = 'container'>
+<!-- <div class = 'container-fluid'>
 
-  <div class='row'> 
-    
-    <div class= 'col-sm-9'>
+
+    <div class= 'col-sm-12'>
+      <h4>
+        2019 California Cities' Crime Data 
+      </h4>
         <div id="table-area" class="">
           <table class="table table-striped">
               <thead>
@@ -65,156 +104,146 @@ style="width:100%;height:100%;">
                   <th class="table-head">Total</th>
                 </tr>
               </thead>
-            <tbody></tbody>
+              <tbody>
+                <tr>
+                  <td class = "table-area"></td>
+                </tr>
+              </tbody>
           </table>
         </div>
       </div>  
-    
 
-      <div class='col-sm-3'>
-
-        <h2>Filter Search</h2>
-
-      <hr size="1", color="grey", width='100%'>
-
-      <label for="text">
-        <h4>
-          Click to select a year:
-        </h4>
-      </label>
-      <p>
-        <select id="selDataset" onchange="getData(this.value)">
-          <option value="california2019">2019</option>
-          <option value="california2018">2018</option>
-        </select>        
-      </p>
-      
-      <label for="text">
-        <h4>
-          <p>
-            Click to select  
-          </p> 
-          <p>
-            10 most dangerous cities OR
-          </p>
-          <p>
-           10 safest cities:
-          </p>
-
-        </h4>
-      </label>
-      <p>
-        <select  id="selDataset"onchange="getData(this.value)">
-          <option value="california2019">10 Most Dangerous Cities</option>
-          <option value="california2018">10 Safest Cities</option>
-        </select>
-      </p>
-
-    
-    </div>
     </div> 
-  </div>
-</div>
 
-<div class='container'>
-  <div class='panel'>
-    ......CHARTS HERE.....
-  </div>
+</div> -->
 
-</div>
+<div class="container-fluid">
+<p> ------------------------------------------------Plotly to be modified-----------------------------------------------</p>
+  
+<div class="row">
+    <div class='col-sm-2'>
 
-<hr size="1", color="grey", width='100%'>
-
-<div class = 'container'>
-
-  <div class='row'> 
-    
-    <div class= 'col-sm-6'>
-      <a href="https://www.publicceo.com/2015/03/these-are-the-10-most-dangerous-places-in-california/" target="_blank">
-        <h4 id='picture'>
-          10 Most Dangerous California Cities
+      <label for="text">
+        <h4>
+        Click to explore the dataset by year:
         </h4>
-        <img src="Images/10 most dangerous cities.png" alt="10 most dangerous California cities" style="width:60%;height:70%;">
-      </a>
-      <p>
-        Grigson (2015, March 4)
-      </p>
+      </label>
+
+      <select id="selDataset" onchange="optionChanged(this.value)">
+      </select>
     </div>
 
-    <div class= 'col-sm-6'>
-      <a>        
-        <a href="https://www.safewise.com/blog/safest-cities-california/" target="_blank">
-          <h4 id='picture'>
-            10 Safest California Cities
-          </h4>
-          <img src="Images/10 safest cities.png" alt="10 safest California cities" style="width:60%;height:70%;">
-        </a>
-      </a>
-      <p>
-        McEntire (2021, March 15)
-      </p>
+    <div class="col-md-10"> 
+      <div class="col-lg-6">
+        <div id="bar"></div>
+      </div>
+      <div class="col-lg-6">
+        <div id="bar2"></div>
+      </div>
     </div>
+  </div> 
+</div>
+<p> ------------------------------------------------Plotly Ends ----------------------------------------------</p>
 
+
+<!-- <div class = 'container'>
+  
+  <table id='top10'>
+    <tr>
+      <h4>
+        California's Top 10 Most Dangerous Cities & Top 10 Safest Cities
+      </h4>
+    </tr>
+
+    <thead class ='col-ls-9'> 
+      <tr>
+        <th class='col-md-6'>
+          Top 10 Most Dangerous Cities
+        </th>
+        <th class='col-md-6'>
+          Top 10 Safest Cities
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>
+          Emervyl
+        </td>
+        <td>
+          Danver
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+
+  
+</div> -->
+
+  <hr size="1", color="grey", width='100%'>
+
+  <div class='container'>
+    <h6>
+
+      <p>
+        References:
+      </p>
+        <p>
+          <a class="dropdown-item" href="https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/california.xls" target="_blank">
+              "CALIFORNIA Offenses Known to Law Enforcement by City, 2019."" (n.d.). Retrieved 2021, 
+              FBI: UCR
+              https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/california.xls    
+          </a>
+        </p>
+
+        <p>
+          <a class="dropdown-item" href="https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/tables/table-8/table-8-state-cuts/california.xls" target="_blank">
+              "CALIFORNIA Offenses Known to Law Enforcement by City, 2018."" (n.d.). Retrieved 2021, 
+              FBI: UCR
+              https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/tables/table-8/table-8-state-cuts/california.xls   
+          </a>
+        </p>
+
+        <p>
+          <a class="dropdown-item" href="www.covesmart.com/blog/most-dangerous-cities-in-california-in-2020" target="_blank">         
+              “Most Dangerous Cities in California in 2021.” (n.d.). Retrieved 2021, 
+              Cove Security, 
+              www.covesmart.com/blog/most-dangerous-cities-in-california-in-2020. 
+          </a>
+        </p>
+        
+        <p>
+          <a class="dropdown-item" href="https://patch.com/california/san-francisco/10-california-cities-ranked-safest-state" target="_blank">         
+              Schuster, Kat, “10 California Cities Ranked As Safest In The State.” (2021, March 24). Retrieved 2021, 
+              Cove Security, 
+              https://patch.com/california/san-francisco/10-california-cities-ranked-safest-state. 
+          </a>
+        </p>
+        
+    
+
+      <p>
+          Credits: 
+          <a href='https://github.com/carmen-ho' target="_blank">
+            Carmen 
+          </a>, 
+          <a href='https://github.com/elstan-tmk' target="_blank">
+            Elstan
+          </a>, 
+          <a href='https://github.com/oxypetalumm' target="_blank">Lina
+          </a> (names in alphabetical order)
+      </p>
+      <p>
+          2021
+      </p>
+    </h6>  
+    
   </div>
-</div>
-
-<hr size="1", color="grey", width='100%'>
-
-<div class='container'>
-  <h6>
-
-    <p>
-      References:
-
-      <p>
-        <a class="dropdown-item" href="https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/california.xls" target="_blank">
-          FBI: UCR (2019)
-          <em>CALIFORNIA Offenses Known to Law Enforcement by City</em>        
-        </a>
-      </p>
-
-      <p>
-        <a class="dropdown-item" href="https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/tables/table-8/table-8-state-cuts/california.xls" target="_blank">
-          FBI: UCR (2018)
-          <em>CALIFORNIA Offenses Known to Law Enforcement by City</em>        
-        </a>
-      </p>
-
-
-      <p>
-        <a class="dropdown-item" href="https://www.publicceo.com/2015/03/these-are-the-10-most-dangerous-places-in-california/" target="_blank">
-          Grigson, Natalie (2015, March 4) 
-          <em>California is the Golden State, but the golden rule isn’t the norm in these 10 places</em>        
-        </a>
-      </p>
-      
-      <p>
-        <a class="dropdown-item" href="https://www.safewise.com/blog/safest-cities-california/" target="_blank">
-          McEntire, Katie (2021, March 15) 
-          <em>California’s 50 Safest Cities of 2021</em>        
-        </a>
-      </p>
-      
-
-    </p>
-
-    <p>
-        Credits: 
-        <a href='https://github.com/carmen-ho' target="_blank">
-          Carmen 
-        </a>, 
-        <a href='https://github.com/elstan-tmk' target="_blank">
-          Elstan
-        </a>, 
-        <a href='https://github.com/oxypetalumm' target="_blank">Lina
-        </a> (names in alphabetical order)
-    </p>
-    <p>
-        2021
-    </p>
-  </h6>  
-   
-</div>
 
 
 
@@ -224,8 +253,9 @@ style="width:100%;height:100%;">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="data/california2019.csv"></script>
-    <script src="js/app.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
 
 
 </body>

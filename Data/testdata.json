@@ -1,0 +1,8 @@
+{
+    "year": ["2019", "2018", "2017"],
+    "metadata":[
+    {"id": "2019","city":["Adelanto","test"],"population":[34491,1],"total":[1484,1]},
+    {"id": "2018","city":["Adelanto","test"],"population":[34429,1],"total":[1484,1]},
+    {"id": "2017","city":["Adelanto","test"],"population":[33693,1],"total":[1645,1]}
+    ]
+}
