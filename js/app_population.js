@@ -17,7 +17,7 @@ charForAllYear();
 
 function chartForSpecificYear(year) {
 
-    d3.json("data/cacsvdata.json", function (error, topology) {
+    d3.json("../Data/cacsvdata.json", function (error, topology) {
 
         var data = topology;
         data.forEach(function (item) {

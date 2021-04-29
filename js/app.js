@@ -1,7 +1,7 @@
 
 // -----------------------------------------------------plotly begins
 function citycharts(year){ // Changed this from sample to year.  
-    d3.json('data/alldata.json')
+    d3.json('../Data/alldata.json')
     .then((data) => {
     const metadata = data.metadata;
     const filteredArray = metadata.filter(sampleData => sampleData.id == year);
