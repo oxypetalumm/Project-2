@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>California Crime Info Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/styles.css"">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v0.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+
+    
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <img src="static/Images/bf2d571488a39e11419799c2a29a010d-cute-cactus-by-vexels.png" alt="credit: https://images.vexels.com" style="width:6%;height:6%;">
+        <a class="navbar-brand text-white" href="index.html">
+           California Crime Info Page Home (Population Charts)
+        </a>
+        
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+     
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav navbar-right">
+    
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="index.html">Dashboard</a>
+                <a class="dropdown-item" href="plotly_charts.html">Crime Charts</a>
+                <a class="dropdown-item" href="google_charts.html">Population Charts</a>
+                <a class="dropdown-item" href="data_page.html">Data</a>   
+            </li>
+    
+          </ul>
+        </div>
+        
+      </nav>
+    
+      <div>
+        <marquee>        
+            <h1>
+                <strong>
+                    Hello World!  
+                    Welcome!
+                </strong> 
+            </h1>
+        </marquee>
+      </div>
+    
+    
+    
+    <img src="static/Images/staticflickr.png" 
+    alt='"Elk Grove Park"' 
+    style="width:100%;height:100%;">
+    
+    
+    <p class='credit'>
+        Photo Credit: staticflickr.com
+    </p>
+
+    <div class='container'>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+            </div>
+            <div class="col-sm-16 col-md-4 col-lg-4 col-xl-4">
+                <div class="form-group">
+                    <label for="Year">Year</label>
+                    <select id="Year" class="form-control"></select>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div id="top_10cities_chart"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div id="least_10cities_chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <hr size="1", color="grey", width='100%'>
+
+  <div class='container'>
+    <h6>
+
+      <p>
+        References:
+      </p>
+        <p>
+          <a class="dropdown-item" href="https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/california.xls" target="_blank">
+              "CALIFORNIA Offenses Known to Law Enforcement by City, 2019."" (n.d.). Retrieved 2021, 
+              FBI: UCR
+              https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/california.xls    
+          </a>
+        </p>
+
+        <p>
+          <a class="dropdown-item" href="https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/tables/table-8/table-8-state-cuts/california.xls" target="_blank">
+              "CALIFORNIA Offenses Known to Law Enforcement by City, 2018."" (n.d.). Retrieved 2021, 
+              FBI: UCR
+              https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/tables/table-8/table-8-state-cuts/california.xls   
+          </a>
+        </p>
+
+        <p>
+          <a class="dropdown-item" href="https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/tables/table-8/table-8-state-cuts/california.xls" target="_blank">
+            "CALIFORNIA Offenses Known to Law Enforcement by City, 2017."" (n.d.). Retrieved 2021, 
+            FBI: UCR
+            https://ucr.fbi.gov/crime-in-the-u.s/2017/crime-in-the-u.s.-2017/tables/table-8/table-8-state-cuts/california.xls   
+          </a>
+        </p>
+
+        <p>
+          <a class="dropdown-item" href="https://www.covesmart.com/blog/most-dangerous-cities-in-california-in-2020" target="_blank">         
+              “Most Dangerous Cities in California in 2021.” (n.d.). Retrieved 2021, 
+              Cove Security, https://www.covesmart.com/blog/most-dangerous-cities-in-california-in-2020. 
+          </a>
+        </p>
+        
+        <p>
+          <a class="dropdown-item" href="https://patch.com/california/san-francisco/10-california-cities-ranked-safest-state" target="_blank">         
+              Schuster, Kat, “10 California Cities Ranked As Safest In The State.” (2021, March 24). Retrieved 2021, 
+              Patch, https://patch.com/california/san-francisco/10-california-cities-ranked-safest-state. 
+          </a>
+        </p>
+        
+    
+
+      <p>
+          Credits: 
+          <a href='https://github.com/carmen-ho' target="_blank">
+            Carmen 
+          </a>, 
+          <a href='https://github.com/elstan-tmk' target="_blank">
+            Elstan
+          </a>, 
+          <a href='https://github.com/oxypetalumm' target="_blank">Lina
+          </a> (names in alphabetical order) with support from 
+          <a href='' target="_blank">
+            Thinh 
+          </a> &          
+          <a href='' target="_blank">
+            Raul 
+          </a>          
+      </p>
+      <p>
+          2021
+      </p>
+    </h6>  
+
+ 
+    <script src = "js/app_population.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+
+    </body>
+</html>

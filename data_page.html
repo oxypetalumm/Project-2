@@ -4,16 +4,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>California Crime Info Page</title>
+  <title>California Crime Info Page (Datasets)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="static/css/styles.css">
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="http://d3js.org/topojson.v0.min.js"></script>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" href="static/css/styles.css"">
 </head>
 
 
@@ -21,7 +18,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <img src="static/Images/bf2d571488a39e11419799c2a29a010d-cute-cactus-by-vexels.png" alt="credit: https://images.vexels.com" style="width:6%;height:6%;">
     <a class="navbar-brand text-white" href="index.html">
-       California Crime Info Page (Dashboard)
+       California Crime Info Page (Data)
     </a>
     
     <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,14 +29,14 @@
       <ul class="nav navbar-nav navbar-right">
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-white" href="WebVisualizations/plots-button.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Menu
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="index.html">Dashboard</a>
             <a class="dropdown-item" href="plotly_charts.html">Crime Charts</a>
             <a class="dropdown-item" href="google_charts.html">Population Charts</a>
-            <a class="dropdown-item" href="data_page.html">Data</a>          
+            <a class="dropdown-item" href="data_page.html">Data</a>            
           </div>
         </li>
 
@@ -70,244 +67,76 @@ style="width:100%;height:100%;">
     Photo Credit: staticflickr.com
 </p>
 
-<!-- -----------------Plotly charts begin ------------- -->
 
-<div class = "container"> 
-  <a href="plotly_charts.html" target="_blank">
-    <h4>
-      California's Top 10 Dangerous Cities vs. Top 10 Safe Cities (2017 - 2019)
-    </h4>
-  <img src="static/Images/plotly.PNG" alt="California most dangerous cities vs. safest cities" style="width:90%;height:90%;">
-  </a>
-</div>
+<div class = 'container'>
 
 
-<!-- -----------------Plotly charts end ------------- -->
-
-<hr size="1", color="grey", width='100%'>
-
-
-<div class='container'>
-  <div class='row'>
-    <div class='col-md-6'>
-        <h4>
-          <a href="https://www.covesmart.com/blog/most-dangerous-cities-in-california-in-2020">
-            California's Top 10 Dangerous Cities (2021) - Cove.come
-          </a> 
-        </h4> 
-      <table class='col-md-12'>
-        <tr>
-          <th>
-            Rank                            
-          </th>
-          <th>
-            City
-          </th>
-        </tr>
-        <tr>
-          <td>
-            1
-          </td>
-          <td>
-            Emeryville
-          </td>
-        </tr>
-        <tr>
-          <td>
-            2
-          </td>
-          <td>
-            Oakland
-          </td>
-        </tr>
-        <tr>
-          <td>
-            3
-          </td>
-          <td>
-            Commerce
-          </td>
-        </tr>
-        <tr>
-          <td>
-            4
-          </td>
-          <td>
-            Red Bluff
-          </td>
-        </tr>
-        <tr>
-          <td>
-            5
-          </td>
-          <td>
-            Barstow
-          </td>
-        </tr>
-        <tr>
-          <td>
-            6
-          </td>
-          <td>
-            West Hollywood
-          </td>
-        </tr>
-        <tr>
-          <td>
-            7
-          </td>
-          <td>
-            San Bernardino
-          </td>
-        </tr>
-        <tr>
-          <td>
-            8
-          </td>
-          <td>
-            Santa Monica
-          </td>
-        </tr>
-        <tr>
-          <td>
-            9
-          </td>
-          <td>
-            Signal Hill
-          </td>
-        </tr>
-        <tr>
-          <td>
-            10
-          </td>
-          <td>
-            Eureka
-          </td>
-        </tr>
-      </table>
-    </div>  
-    
-
-    <div class='col-md-6'>
-      <h4>
-        <a href="https://www.covesmart.com/blog/most-dangerous-cities-in-california-in-2020">
-          California's Top 10 Safe Cities (2021) - Path.com
-        </a> 
-      </h4>
-
-      <table class='col-md-12'>
-        <tr>
-          <th>
-            Rank
-          </th>
-          <th>
-            City
-          </th>
-        </tr>
-        <tr>
-          <td>
-            1
-          </td>
-          <td>
-            Danville
-          </td>
-        </tr>
-        <tr>
-          <td>
-            2
-          </td>
-          <td>
-            Rancho Santa Margarita
-          </td>
-        </tr>
-        <tr>
-          <td>
-            3
-          </td>
-          <td>
-            Moorpark
-          </td>
-        </tr>
-        <tr>
-          <td>
-            4
-          </td>
-          <td>
-            Rancho Palos Verdes
-          </td>
-        </tr>
-        <tr>
-          <td>
-            5
-          </td>
-          <td>
-            Aliso Viejo
-          </td>
-        </tr>
-        <tr>
-          <td>
-            6
-          </td>
-          <td>
-            Lake Forest
-          </td>
-        </tr>
-        <tr>
-          <td>
-            7
-          </td>
-          <td>
-            Yorba Linda
-          </td>
-        </tr>
-        <tr>
-          <td>
-            8
-          </td>
-          <td>
-            Laguna Niguel
-          </td>
-        </tr>
-        <tr>
-          <td>
-            9
-          </td>
-          <td>
-            Mission Viejo
-          </td>
-        </tr>
-        <tr>
-          <td>
-            10
-          </td>
-          <td>
-            Lincoln
-          </td>
-        </tr>
-      </table>
+    <div class="container">
+        <aside class="filters">        
+           
+          <p>
+            ʕ•ᴥ•ʔ  -------------- 
+            <h4>              
+              Filter Search  
+            </h4>
+            ------------------ ʕ•ᴥ•ʔ
+          </p>
+          <form>
+            <div class="form-group">
+                <ul class="list-group" id="filters">
+                  <li class="filter list-group-item">
+                      <label for="City">
+                        Enter a California city
+                      </label>
+                      <input class="form-control" id="cities" type="text" placeholder="Los Angeles">
+                  </li>
+                </ul>
+            </div>
+            <button id="filter-btn" type="button" class="btn btn-default">Filter Table by Year</button>
+          </form>
+        </aside>
     </div>
 
+    <hr size="1", color="grey", width='100%'>
+    <div class= 'col-sm-12'>
+      <h4>
+        California Cities' Crime Data 
+      </h4>
+        <div id="table-area" class="">
+          <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Year</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">Population</th>
+                  <th class="table-head">Violent Crime</th>
+                  <th class="table-head">Murder</th>
+                  <th class="table-head">Rape</th>
+                  <th class="table-head">Robbery</th>
+                  <th class="table-head">Assault</th>
+                  <th class="table-head">Property Crime</th>
+                  <th class="table-head">Burglary</th>
+                  <th class="table-head">Larceny</th>
+                  <th class="table-head">Motor Theft</th>
+                  <th class="table-head">Arson</th>
+                  <th class="table-head">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class = "table-area"></td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>  
 
-  </div> 
-
-
+    </div> 
+  <!-- </div> -->
 </div>
 
-  <hr size="1", color="grey", width='100%'>
-
-<!-- -----------------Google charts begin ------------- -->
 
 
-<div class = "container"> 
-  <a href="google_charts.html" target="_blank">
-    <h4 id='p'>
-      California's 10 Largest Cities vs. 10 Smallest Cities by Population (2017 - 2019)
-    </h4>
-  <img src="static/Images/Population.PNG" alt="California largest and smallest cities by pupulation" style="width:90%;height:90%;">
-  </a>
-</div>
-
-<!-- -----------------Google charts end ------------- -->
 <hr size="1", color="grey", width='100%'>
 
   <div class='container'>
@@ -377,18 +206,19 @@ style="width:100%;height:100%;">
           2021
       </p>
     </h6>  
-    
-  </div>
+
+
+
+
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="data/all_data.js"></script>
+    <script src="js/app_data_page.js"></script>
+
 
 </body>
 
