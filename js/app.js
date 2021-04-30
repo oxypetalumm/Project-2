@@ -1,5 +1,5 @@
 
-function citycharts(year){ // Changed this from sample to year.  
+function citycharts(year){ 
     d3.json('/Data/alldata.json')
     .then((data) => {
     const metadata = data.metadata;
