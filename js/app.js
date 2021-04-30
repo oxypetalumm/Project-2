@@ -108,7 +108,7 @@ function optionChanged(othersample) {
     citycharts(othersample);
 }
 
-init();
+// init();
 
 
 
