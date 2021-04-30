@@ -90,3 +90,8 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+#click{
+  text-align: left;
+  color: black
+}
