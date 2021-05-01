@@ -19,29 +19,29 @@ function buildTable(crime) {
 }
 
 // create function for filter
-function runEnter1() {
-  const validDates = [2017, 2018, 2019]
-  var selectDate = d3.select('#years').property('value');
+// function runEnter1() {
+//   const validDates = [2017, 2018, 2019]
+//   var selectDate = d3.select('#years').property('value');
 
-  if (selectDate) {
-    warningMsg.attr("style", "display: none")
-    filtered_date = (tableData.filter(Crime => Crime.Year == selectDate));
+//   if (selectDate) {
+//     warningMsg.attr("style", "display: none")
+//     filtered_date = (tableData.filter(Crime => Crime.Year == selectDate));
 
-    buildTable(filtered_date)
-  } else {
-    warningMsg.text(`Please insert one of these years [${validDates[0]}, ${validDates[1]}, ${validDates[2]}].`)
-      .attr("style", "display: inline; color: red;")
-  }
-}
+//     buildTable(filtered_date)
+//   } else {
+//     warningMsg.text(`Please insert one of these years [${validDates[0]}, ${validDates[1]}, ${validDates[2]}].`)
+//       .attr("style", "display: inline; color: red;")
+//   }
+// }
 
-// filter button
-var button = d3.select("#filter-btn");
-button.on("click", runEnter1);
+// // filter button
+// var button = d3.select("#filter-btn");
+// button.on("click", runEnter1);
 
 // -------------------------------------------------------------------
 // create function for filter
-function runEnter2() {
-  // const validDates = [2017, 2018, 2019]
+function runEnter() {
+
   var selectCity = d3.select('#cities').property('value');
 
   if (selectCity) {
@@ -57,7 +57,7 @@ function runEnter2() {
 
 // filter button
 var button = d3.select("#filter-btn");
-button.on("click", runEnter2);
+button.on("click", runEnter);
 
 // render the table
 buildTable(tableData);

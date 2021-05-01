@@ -22492,7 +22492,7 @@ var all_data = [
   },
   {
     "Year": 2017,
-    "City": "Stockton3",
+    "City": "Stockton",
     "Population": "309,566",
     "Violent Crime": "4,379",
     "Murder": 55,
