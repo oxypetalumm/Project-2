@@ -1,6 +1,6 @@
 This project has been cooperating with Elstan Tam and Carmen Ho. 
 
-The project is about California cities' crime. We made interactive tables, Plotly charts and Google charts. 
+The project is about California cities' crime. We used FBI crime datasets for 2017, 2018, and 2019 to make interactive tables, Plotly charts and Google charts for visitors to explore crime records by city. We Google searched a couple websites for California's top 10 dangerous and tope 10 safe cities. It turned out Google results weren't nececcsary correctly reflect California's top 10 dangerous and tope 10 safe cities based on FBI's datasets.
 
 Please click on this link to view our pages https://oxypetalumm.github.io/Project-2/ . 
 
