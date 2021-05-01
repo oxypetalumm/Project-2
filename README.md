@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 This project has been cooperating with Elstan Tam and Carmen Ho. 
 
 The project is about California cities' crime. We made interactive tables, Plotly charts and Google charts. 
