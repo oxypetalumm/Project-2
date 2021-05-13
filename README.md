@@ -1,6 +1,6 @@
 # Project 2
 
-This project has been cooperating with Elstan Tam and Carmen Ho. 
+This project has been cooperating with Elstan and Carmen. 
 
 The project is about California cities' crime. We used FBI crime datasets for 2017, 2018, and 2019 to make interactive tables, Plotly charts and Google charts for visitors to explore crime records by city. 
 
