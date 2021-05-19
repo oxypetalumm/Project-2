@@ -1,6 +1,6 @@
 
 function citycharts(year){ // Changed this from sample to year.  
-    d3.json('./Data/alldata.json')
+    d3.json('/Project-2/Data/alldata.json')
     .then((data) => {
     const metadata = data.metadata;
     const filteredArray = metadata.filter(sampleData => sampleData.id == year);
