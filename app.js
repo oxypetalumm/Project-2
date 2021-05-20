@@ -1,6 +1,6 @@
 
 function citycharts(year){ // Changed this from sample to year.  
-    d3.json('./all_data.js')
+    d3.json('all_data.js')
     .then((data) => {
     const metadata = data.metadata;
     const filteredArray = metadata.filter(sampleData => sampleData.id == year);
@@ -89,7 +89,7 @@ function init(){
 
     const dropdownMenu = d3.select("#selDataset");
 
-    d3.json('./all_data.js')
+    d3.json('all_data.js')
     .then((data) => {
         const dropdownNames = data.year;
         dropdownNames.forEach((year) => {
