@@ -89,7 +89,7 @@ function init(){
 
     const dropdownMenu = d3.select("#selDataset");
 
-    d3.json('/Data/alldata.json')
+    d3.json('./Data/alldata.json')
     .then((data) => {
         const dropdownNames = data.year;
         dropdownNames.forEach((year) => {
